@@ -1,8 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
-secret_number = (1 + rand(99).to_s)
+secret_number = (1 + rand(99))
 
 get "/" do 
-	"The secret number is #{secret_number}"
+	erb :index, :locals => {:number => secret_number}
 end
