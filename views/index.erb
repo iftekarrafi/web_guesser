@@ -2,17 +2,37 @@
   <head></head> 
   <body>
     <p>
-    <h1>The Guessing Game!</h1>
-      ENTER YOUR GUESS HERE: <br>
+      <%if guess == "Way Too High" ||  guess == "Way Too Low" %>
+        <body style='background: #EC0000'> 
+          <p style= "text-align: center;">      
+          <img src="http://singleblink.files.wordpress.com/2013/03/wrong.gif?w=523"></a>
+        
+        <%elsif guess == "Too High!" ||  guess == "Too Low" %>
+        <body style='background: #EE4E4E'>
+           <p style= "text-align: center;">      
+          <img src="http://singleblink.files.wordpress.com/2013/03/wrong.gif?w=523"></a>
+        
+        <%elsif guess == "Correct, the secret number was #{number}"%>
+        <body style='background: #09EC2F'>
+          <p style= "text-align: center;">      
+          <img src="http://25.media.tumblr.com/tumblr_mdgfpehkYN1r8cvzdo1_500.gif"></a>
+          <%end%>
+    
+    <p style= "text-align: center;">
+      <font size="10">The Guessing Game!</font>
+    <p> 
+      <p style= "text-align: center;">
+        ENTER YOUR GUESS HERE [1-100]: <br>
+        The Secret Number Is <%=number%> 
+    <p>
       <form>
+      <p style= "text-align: center;">
   		<input type='text' name='guess' />
   		<input type='submit' value='Guess!' />
+    <p>
+      <p style= "text-align: center;">
+      </html>You're guess is <%= guess %>
 	</form>
     </p>
   </body>
-</html>
-You're guess is <%= guess %>
 <p>
-<a href="https://github.com/iftekarrafi/web_guesser"><img src="http://en.gravatar.com/userimage/52627473/0f8c3ca0b02dc25fa2b916823cd36d9c.jpg?size=200"></a>
-<p>
-Click The Pic To Check Out The Code
