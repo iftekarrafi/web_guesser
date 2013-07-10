@@ -4,14 +4,10 @@
     <p>
       <%if guess == "Way Too High" ||  guess == "Way Too Low" %>
         <body style='background: #EC0000'> 
-          <p style= "text-align: center;">      
-          <img src="http://singleblink.files.wordpress.com/2013/03/wrong.gif?w=523"></a>
         
         <%elsif guess == "Too High!" ||  guess == "Too Low" %>
         <body style='background: #EE4E4E'>
-           <p style= "text-align: center;">      
-          <img src="http://singleblink.files.wordpress.com/2013/03/wrong.gif?w=523"></a>
-        
+
         <%elsif guess == "Correct, the secret number was #{number}"%>
         <body style='background: #09EC2F'>
           <p style= "text-align: center;">      
@@ -32,6 +28,9 @@
     <p>
       <p style= "text-align: center;">
       </html>You're guess is <%= guess %>
+    <p>
+      <p style= "text-align: center;">
+      You Only Have 5 Tries Before The Number Refreshes
 	</form>
     </p>
   </body>
